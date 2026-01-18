@@ -1,0 +1,112 @@
+/* src/index.css */
+/* ----- All Global and Tailwind CSS Classes ----- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+/* Tailwind Theme ( Colors and Fonts ) */
+@theme {
+  --font-inter: var(--font-inter);
+  --font-montserrat: var(--font-montserrat);
+  --color-background: var(--bg-color);
+  --color-surface: var(--bg-alt-color);
+  --color-text: var(--text-color);
+  --color-subtext: var(--subtext-color);
+  --color-accent: var(--accent-color);
+}
+
+:root {
+  font-family: var(--font-inter);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+
+  /* ScrollBar for Firefox */
+  scrollbar-color: var(--border-color) var(--bg-alt-color);
+  scrollbar-width: thin;
+
+  /* Fonts */
+  --font-inter: 'Inter', sans-serif;
+  --font-roboto-slab: 'Roboto Slab', serif;
+
+  /* Dark Theme */
+  --bg-color: #212121;
+  --bg-alt-color: #263238;
+  --text-color: #f5f5f5;
+  --subtext-color: #90a4ae;
+  --accent-color: #ff9900;
+}
+
+/* Light Theme */
+.light {
+  --bg-color: #f5f5f5;
+  --bg-alt-color: #e3f2fd;
+  --text-color: #212121;
+  --subtext-color: #455a64;
+  --accent-color: #ff9900;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+}
+
+/* ScrollBar for Webkit Browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-alt-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+  border: 2px solid var(--bg-alt-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color);
+}
+
+/* ----- End of Global and Tailwind CSS Classes ----- */
+
+/* ----- Custom CSS Classes ----- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Button Styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-semibold transition-colors duration-300;
+}
+.btn-primary {
+  @apply bg-accent text-white hover:bg-accent/80;
+}
+.btn-secondary {
+  @apply bg-surface text-text hover:bg-surface/80;
+} 
+.btn-outline {
+  @apply border-2 border-accent text-accent hover:bg-accent/10;
+} 
