@@ -84,5 +84,6 @@ MAILER_PASSWORD="your_mailer_password"
 
 ```bash
 npm install
+npm run setup
 npm run dev
 ```
