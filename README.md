@@ -65,7 +65,7 @@ friendlink/
 
 **Ankit Raj**
 
-- 📫 [contact@rajankit.in](mailto:contact@rajankit.in)
+- 📫 [hello@rajankit.in](mailto:hello@rajankit.in)
 - 🐙 [GitHub](https://github.com/ankitraj217)
 - 💼 [LinkedIn](https://linkedin.com/in/ankitraj217)
 
